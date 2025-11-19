@@ -1,0 +1,652 @@
+{
+  "names": [
+    {
+      "name": "Altansarnai",
+      "meaning": "Golden Rose",
+      "gender": "girl",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Altantsetseg",
+      "meaning": "Golden Flower",
+      "gender": "girl",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Oyuun",
+      "meaning": "Wisdom, Intellect",
+      "gender": "girl",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Bolormaa",
+      "meaning": "Crystal Woman",
+      "gender": "girl",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Sarangerel",
+      "meaning": "Moonlight",
+      "gender": "girl",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Narantuya",
+      "meaning": "Sun Ray",
+      "gender": "girl",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Enkhjargal",
+      "meaning": "Peaceful Happiness",
+      "gender": "girl",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Tsolmon",
+      "meaning": "Venus, Morning Star",
+      "gender": "girl",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Tungalag",
+      "meaning": "Clear, Transparent",
+      "gender": "girl",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Urantsetseg",
+      "meaning": "Artistic Flower",
+      "gender": "girl",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Bayarmaa",
+      "meaning": "Mother of Joy",
+      "gender": "girl",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Khaliun",
+      "meaning": "Gentle, Calm",
+      "gender": "girl",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Gerel",
+      "meaning": "Light",
+      "gender": "girl",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Solongo",
+      "meaning": "Rainbow",
+      "gender": "girl",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Chimeg",
+      "meaning": "Decoration, Ornament",
+      "gender": "girl",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Ariunaa",
+      "meaning": "Pure Mother",
+      "gender": "girl",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Enkhjin",
+      "meaning": "Gentle, Peaceful",
+      "gender": "girl",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Erdenechimeg",
+      "meaning": "Jeweled Ornament",
+      "gender": "girl",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Khulan",
+      "meaning": "Wild Ass",
+      "gender": "girl",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Mandukhai",
+      "meaning": "Eternal Sky",
+      "gender": "girl",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Nandin",
+      "meaning": "Joyful",
+      "gender": "girl",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Odgerel",
+      "meaning": "Starlight",
+      "gender": "girl",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Odonchimeg",
+      "meaning": "Star Ornament",
+      "gender": "girl",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Oyunbileg",
+      "meaning": "Wisdom Gift",
+      "gender": "girl",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Saikhan",
+      "meaning": "Beautiful, Good",
+      "gender": "girl",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Sarantsatsral",
+      "meaning": "Moonbeam",
+      "gender": "girl",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Setgel",
+      "meaning": "Heart, Mind",
+      "gender": "girl",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Tserendolgor",
+      "meaning": "Long Life Wave",
+      "gender": "girl",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Tsetsegmaa",
+      "meaning": "Flower Mother",
+      "gender": "girl",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Tuya",
+      "meaning": "Ray, Beam",
+      "gender": "girl",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Uyanga",
+      "meaning": "Melody",
+      "gender": "girl",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Delgermaa",
+      "meaning": "Abundant Mother",
+      "gender": "girl",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Narantsetseg",
+      "meaning": "Sun Flower",
+      "gender": "girl",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Undrakh",
+      "meaning": "To Sprout",
+      "gender": "girl",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Zolzaya",
+      "meaning": "Fortune Destiny",
+      "gender": "girl",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Ankhbayar",
+      "meaning": "First Joy",
+      "gender": "girl",
+      "origin": "Modern"
+    },
+    {
+      "name": "Badamtsetseg",
+      "meaning": "Almond Flower",
+      "gender": "girl",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Battsetseg",
+      "meaning": "Strong Flower",
+      "gender": "girl",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Burmaa",
+      "meaning": "Blessed Mother",
+      "gender": "girl",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Dulamsuren",
+      "meaning": "Summer Beauty",
+      "gender": "girl",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Enkhtsetseg",
+      "meaning": "Peaceful Flower",
+      "gender": "girl",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Gerelsaikhan",
+      "meaning": "Beautiful Light",
+      "gender": "girl",
+      "origin": "Modern"
+    },
+    {
+      "name": "Khandmaa",
+      "meaning": "Beloved Mother",
+      "gender": "girl",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Khongorzul",
+      "meaning": "Sweet Light",
+      "gender": "girl",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Munkhtsetseg",
+      "meaning": "Eternal Flower",
+      "gender": "girl",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Naranchimeg",
+      "meaning": "Sun Ornament",
+      "gender": "girl",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Nergui",
+      "meaning": "No Name",
+      "gender": "girl",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Odmaa",
+      "meaning": "Star Mother",
+      "gender": "girl",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Saintsetseg",
+      "meaning": "Good Flower",
+      "gender": "girl",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Tsagaantsetseg",
+      "meaning": "White Flower",
+      "gender": "girl",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Ulambayar",
+      "meaning": "Red Joy",
+      "gender": "girl",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Uranchimeg",
+      "meaning": "Art Ornament",
+      "gender": "girl",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Yesui",
+      "meaning": "Nine",
+      "gender": "girl",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Zolboo",
+      "meaning": "Peace, Blessing",
+      "gender": "girl",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Nomintsetseg",
+      "meaning": "Emerald Flower",
+      "gender": "girl",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Baatar",
+      "meaning": "Hero",
+      "gender": "boy",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Batu",
+      "meaning": "Strong, Firm",
+      "gender": "boy",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Batbayar",
+      "meaning": "Strong Joy",
+      "gender": "boy",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Ganzorig",
+      "meaning": "Steel Courage",
+      "gender": "boy",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Erdene",
+      "meaning": "Jewel, Treasure",
+      "gender": "boy",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Temujin",
+      "meaning": "Iron",
+      "gender": "boy",
+      "origin": "Historical"
+    },
+    {
+      "name": "Bold",
+      "meaning": "Steel",
+      "gender": "boy",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Dorj",
+      "meaning": "Diamond, Vajra",
+      "gender": "boy",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Enkh",
+      "meaning": "Peace",
+      "gender": "boy",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Ochir",
+      "meaning": "Thunderbolt, Vajra",
+      "gender": "boy",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Sukhbat",
+      "meaning": "Mighty Axe",
+      "gender": "boy",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Tumur",
+      "meaning": "Iron",
+      "gender": "boy",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Batmunkh",
+      "meaning": "Strong Eternal",
+      "gender": "boy",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Ganbold",
+      "meaning": "Steel Steel",
+      "gender": "boy",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Munkhbat",
+      "meaning": "Eternal Strength",
+      "gender": "boy",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Baterdene",
+      "meaning": "Strong Jewel",
+      "gender": "boy",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Boldbaatar",
+      "meaning": "Steel Hero",
+      "gender": "boy",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Chinggis",
+      "meaning": "Strong, Powerful",
+      "gender": "boy",
+      "origin": "Historical"
+    },
+    {
+      "name": "Davaasuren",
+      "meaning": "Monday Power",
+      "gender": "boy",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Enkhbat",
+      "meaning": "Peaceful Strength",
+      "gender": "boy",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Erdenebat",
+      "meaning": "Jewel Strength",
+      "gender": "boy",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Galbadrakh",
+      "meaning": "Fire Prosperity",
+      "gender": "boy",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Ganbat",
+      "meaning": "Steel Strength",
+      "gender": "boy",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Jargal",
+      "meaning": "Happiness",
+      "gender": "boy",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Khuyag",
+      "meaning": "Armor",
+      "gender": "boy",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Munkherdene",
+      "meaning": "Eternal Jewel",
+      "gender": "boy",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Otgonbayar",
+      "meaning": "Youngest Joy",
+      "gender": "boy",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Purevbaatar",
+      "meaning": "Complete Hero",
+      "gender": "boy",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Tomorbaatar",
+      "meaning": "Iron Hero",
+      "gender": "boy",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Tsogbaatar",
+      "meaning": "Perfect Hero",
+      "gender": "boy",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Batzorig",
+      "meaning": "Strong Courage",
+      "gender": "boy",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Byambadorj",
+      "meaning": "Saturday Diamond",
+      "gender": "boy",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Damdin",
+      "meaning": "Deity Name",
+      "gender": "boy",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Dashnyam",
+      "meaning": "Good Fortune Sunday",
+      "gender": "boy",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Ganbaatar",
+      "meaning": "Steel Hero",
+      "gender": "boy",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Gantumur",
+      "meaning": "Steel Iron",
+      "gender": "boy",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Khashbaatar",
+      "meaning": "Jade Hero",
+      "gender": "boy",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Lkhagvasuren",
+      "meaning": "Wednesday Power",
+      "gender": "boy",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Munkhsaikhan",
+      "meaning": "Eternal Good",
+      "gender": "boy",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Naranbaatar",
+      "meaning": "Sun Hero",
+      "gender": "boy",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Odbayar",
+      "meaning": "Star Joy",
+      "gender": "boy",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Purevdorj",
+      "meaning": "Pure Diamond",
+      "gender": "boy",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Saranbaatar",
+      "meaning": "Moon Hero",
+      "gender": "boy",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Sodbaatar",
+      "meaning": "Thursday Hero",
+      "gender": "boy",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Tegshbayar",
+      "meaning": "Perfect Joy",
+      "gender": "boy",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Tsendbaatar",
+      "meaning": "Best Hero",
+      "gender": "boy",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Tserenbat",
+      "meaning": "Long Life Strength",
+      "gender": "boy",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Tuguldur",
+      "meaning": "Victory",
+      "gender": "boy",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Zorig",
+      "meaning": "Courage",
+      "gender": "boy",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Altankhuyag",
+      "meaning": "Golden Armor",
+      "gender": "boy",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Batkhuyag",
+      "meaning": "Strong Armor",
+      "gender": "boy",
+      "origin": "Traditional"
+    },
+    {
+      "name": "Bilguun",
+      "meaning": "Wise",
+      "gender": "boy",
+      "origin": "Modern"
+    },
+    {
+      "name": "Khurelbaatar",
+      "meaning": "Bronze Hero",
+      "gender": "boy",
+      "origin": "Traditional"
+    }
+  ]
+}
