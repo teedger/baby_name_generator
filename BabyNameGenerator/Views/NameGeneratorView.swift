@@ -9,6 +9,11 @@ import SwiftUI
 
 struct NameGeneratorView: View {
     @StateObject private var viewModel = NameGeneratorViewModel()
+    @ObservedObject var favoritesManager = FavoritesManager.shared
+    @ObservedObject var historyManager = HistoryManager.shared
+    @ObservedObject var settingsManager = SettingsManager.shared
+
+    @State private var showingNameDetail = false
 
     var body: some View {
         ZStack {
@@ -32,13 +37,50 @@ struct NameGeneratorView: View {
                 Spacer()
                     .frame(height: 20)
 
-                // Name display card
-                NameDisplay(
-                    name: viewModel.currentName,
-                    themeColor: viewModel.selectedGender.themeColor
-                )
-                .id(viewModel.currentName?.id) // Force view refresh on name change
-                .animation(.spring(response: 0.6, dampingFraction: 0.7), value: viewModel.currentName)
+                // Name display card with favorite button
+                VStack(spacing: 16) {
+                    NameDisplay(
+                        name: viewModel.currentName,
+                        themeColor: viewModel.selectedGender.themeColor
+                    )
+                    .id(viewModel.currentName?.id)
+                    .animation(
+                        settingsManager.enableAnimations
+                            ? .spring(response: 0.6, dampingFraction: 0.7)
+                            : .none,
+                        value: viewModel.currentName
+                    )
+                    .onTapGesture {
+                        if viewModel.currentName != nil {
+                            showingNameDetail = true
+                        }
+                    }
+
+                    // Favorite button
+                    if let name = viewModel.currentName {
+                        Button(action: {
+                            if settingsManager.enableHaptics {
+                                let generator = UIImpactFeedbackGenerator(style: .light)
+                                generator.impactOccurred()
+                            }
+                            favoritesManager.toggleFavorite(name)
+                        }) {
+                            HStack(spacing: 8) {
+                                Image(systemName: favoritesManager.isFavorite(name) ? "heart.fill" : "heart")
+                                    .font(.system(size: 18))
+                                Text(favoritesManager.isFavorite(name) ? "Saved" : "Save to Favorites")
+                                    .font(.system(size: 14, weight: .medium, design: .rounded))
+                            }
+                            .foregroundColor(favoritesManager.isFavorite(name) ? .red : .textSecondary)
+                            .padding(.horizontal, 20)
+                            .padding(.vertical, 10)
+                            .background(
+                                Capsule()
+                                    .fill(Color.white.opacity(0.5))
+                            )
+                        }
+                    }
+                }
 
                 Spacer()
 
@@ -46,6 +88,11 @@ struct NameGeneratorView: View {
                 GenerateButton(
                     action: {
                         viewModel.generateRandomName()
+
+                        // Add to history
+                        if let name = viewModel.currentName {
+                            historyManager.addToHistory(name)
+                        }
                     },
                     themeColor: viewModel.selectedGender.themeColor
                 )
@@ -53,13 +100,24 @@ struct NameGeneratorView: View {
                 Spacer()
                     .frame(height: 80)
 
-                // Optional: Name count indicator
+                // Name count indicator
                 Text("\(viewModel.getNameCount()) \(viewModel.selectedGender.displayName) Names")
                     .font(.system(size: 14, weight: .medium, design: .rounded))
                     .foregroundColor(.textSecondary.opacity(0.6))
                     .padding(.bottom, 20)
             }
             .padding()
+        }
+        .sheet(isPresented: $showingNameDetail) {
+            if let name = viewModel.currentName {
+                NameDetailView(name: name)
+            }
+        }
+        .onAppear {
+            // Set default gender from settings
+            if viewModel.currentName == nil {
+                viewModel.toggleGender(to: settingsManager.defaultGender)
+            }
         }
     }
 }

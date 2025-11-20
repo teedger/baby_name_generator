@@ -10,6 +10,7 @@ import SwiftUI
 struct GenerateButton: View {
     let action: () -> Void
     let themeColor: Color
+    @ObservedObject var settingsManager = SettingsManager.shared
     @State private var isPressed = false
     @State private var rotation: Double = 0
 
@@ -54,18 +55,24 @@ struct GenerateButton: View {
     }
 
     private func handleTap() {
-        // Haptic feedback
-        let impact = UIImpactFeedbackGenerator(style: .medium)
-        impact.impactOccurred()
-
-        // Press animation
-        withAnimation(.spring(response: 0.3, dampingFraction: 0.6)) {
-            isPressed = true
+        // Haptic feedback (respects settings)
+        if settingsManager.enableHaptics {
+            let impact = UIImpactFeedbackGenerator(style: .medium)
+            impact.impactOccurred()
         }
 
-        // Rotation animation
-        withAnimation(.easeInOut(duration: 0.6)) {
-            rotation += 360
+        // Press animation (respects settings)
+        if settingsManager.enableAnimations {
+            withAnimation(.spring(response: 0.3, dampingFraction: 0.6)) {
+                isPressed = true
+            }
+
+            // Rotation animation
+            withAnimation(.easeInOut(duration: 0.6)) {
+                rotation += 360
+            }
+        } else {
+            isPressed = true
         }
 
         // Execute action
@@ -73,7 +80,11 @@ struct GenerateButton: View {
 
         // Reset press state
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-            withAnimation {
+            if settingsManager.enableAnimations {
+                withAnimation {
+                    isPressed = false
+                }
+            } else {
                 isPressed = false
             }
         }

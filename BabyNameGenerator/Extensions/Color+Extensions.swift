@@ -61,6 +61,26 @@ extension Color {
     /// Strong shadow
     static let shadowStrong = Color.black.opacity(0.15)
 
+    // MARK: - Dark Mode Colors (for future dark theme)
+
+    /// Dark mode girl theme
+    static let babyGirlDark = Color(hex: "#4A1A2E")
+
+    /// Dark mode boy theme
+    static let babyBoyDark = Color(hex: "#1A2E4A")
+
+    /// Dark mode background
+    static let darkBackground = Color(hex: "#121212")
+
+    /// Dark mode card background
+    static let darkCard = Color(hex: "#1E1E1E")
+
+    /// Dark mode text primary
+    static let darkTextPrimary = Color(hex: "#E0E0E0")
+
+    /// Dark mode text secondary
+    static let darkTextSecondary = Color(hex: "#A0A0A0")
+
     // MARK: - Hex Initializer
 
     /// Initialize color from hex string

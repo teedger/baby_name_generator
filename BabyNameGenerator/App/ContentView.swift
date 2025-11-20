@@ -2,15 +2,24 @@
 //  ContentView.swift
 //  BabyNameGenerator
 //
-//  Root view of the application
+//  Root view of the application with onboarding and tab navigation
 //
 
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var settingsManager = SettingsManager.shared
+
     var body: some View {
-        NameGeneratorView()
-            .preferredColorScheme(.light) // Force light mode for v1.0
+        Group {
+            if settingsManager.hasSeenOnboarding {
+                MainTabView()
+            } else {
+                OnboardingView()
+            }
+        }
+        .preferredColorScheme(settingsManager.colorScheme)
+        .animation(.easeInOut, value: settingsManager.hasSeenOnboarding)
     }
 }
 
