@@ -10,6 +10,7 @@ import SwiftUI
 struct HistoryView: View {
     @ObservedObject var historyManager = HistoryManager.shared
     @ObservedObject var favoritesManager = FavoritesManager.shared
+    @ObservedObject var settingsManager = SettingsManager.shared
     @State private var selectedGender: Gender = .girl
     @State private var selectedName: BabyName?
     @State private var showingNameDetail = false

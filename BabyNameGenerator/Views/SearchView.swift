@@ -16,6 +16,7 @@ struct SearchView: View {
     @State private var showingNameDetail = false
 
     @ObservedObject var favoritesManager = FavoritesManager.shared
+    @ObservedObject var settingsManager = SettingsManager.shared
     private let repository = NameRepository()
 
     enum SortOption: String, CaseIterable {
