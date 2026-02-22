@@ -24,7 +24,13 @@ struct NameGeneratorView: View {
             // Main content
             VStack(spacing: 40) {
                 Spacer()
-                    .frame(height: 60)
+                    .frame(height: 20)
+
+                // Logo
+                Image("LogoWithText")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 180)
 
                 // Gender toggle
                 GenderToggle(

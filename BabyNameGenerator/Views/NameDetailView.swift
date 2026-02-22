@@ -122,21 +122,23 @@ struct NameDetailView: View {
     private var actionsSection: some View {
         VStack(spacing: 12) {
             // Share button
-            ShareLink(
-                item: "\(name.name) - \(name.meaning)\n\nA beautiful Mongolian name meaning \"\(name.meaning)\"",
-                subject: Text("Baby Name: \(name.name)"),
-                message: Text("Check out this beautiful Mongolian baby name!")
-            ) {
-                HStack {
-                    Image(systemName: "square.and.arrow.up")
-                    Text("Share Name")
+            if #available(iOS 16.0, *) {
+                ShareLink(
+                    item: "\(name.name) - \(name.meaning)\n\nA beautiful Mongolian name meaning \"\(name.meaning)\"",
+                    subject: Text("Baby Name: \(name.name)"),
+                    message: Text("Check out this beautiful Mongolian baby name!")
+                ) {
+                    HStack {
+                        Image(systemName: "square.and.arrow.up")
+                        Text("Share Name")
+                    }
+                    .font(.system(size: 18, weight: .semibold, design: .rounded))
+                    .foregroundColor(.white)
+                    .frame(maxWidth: .infinity)
+                    .padding()
+                    .background(name.gender.themeColor)
+                    .cornerRadius(16)
                 }
-                .font(.system(size: 18, weight: .semibold, design: .rounded))
-                .foregroundColor(.white)
-                .frame(maxWidth: .infinity)
-                .padding()
-                .background(name.gender.themeColor)
-                .cornerRadius(16)
             }
 
             // Copy button

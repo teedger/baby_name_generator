@@ -130,10 +130,12 @@ struct FavoriteRowView: View {
             Spacer()
 
             // Share button
-            ShareLink(item: "\(name.name) - \(name.meaning)") {
-                Image(systemName: "square.and.arrow.up")
-                    .font(.system(size: 18))
-                    .foregroundColor(.textSecondary)
+            if #available(iOS 16.0, *) {
+                ShareLink(item: "\(name.name) - \(name.meaning)") {
+                    Image(systemName: "square.and.arrow.up")
+                        .font(.system(size: 18))
+                        .foregroundColor(.textSecondary)
+                }
             }
 
             // Remove button
