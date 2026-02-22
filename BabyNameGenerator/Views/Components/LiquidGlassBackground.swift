@@ -10,23 +10,30 @@ import SwiftUI
 struct LiquidGlassBackground: View {
     let colors: [Color]
     @State private var animateGradient = false
+    private var isDark: Bool { SettingsManager.shared.isDarkMode }
 
     var body: some View {
         ZStack {
-            // Main gradient
-            LinearGradient(
-                colors: colors,
-                startPoint: animateGradient ? .topLeading : .bottomLeading,
-                endPoint: animateGradient ? .bottomTrailing : .topTrailing
-            )
-            .ignoresSafeArea()
+            if isDark {
+                Color.darkBg
+                    .ignoresSafeArea()
+            } else {
+                // Animated gradient (light mode only)
+                LinearGradient(
+                    colors: colors,
+                    startPoint: animateGradient ? .topLeading : .bottomLeading,
+                    endPoint: animateGradient ? .bottomTrailing : .topTrailing
+                )
+                .ignoresSafeArea()
 
-            // Optional: Floating glass bubbles
-            FloatingBubbles(color: colors.first ?? .white)
+                FloatingBubbles(color: colors.first ?? .white)
+            }
         }
         .onAppear {
-            withAnimation(.easeInOut(duration: 3.0).repeatForever(autoreverses: true)) {
-                animateGradient.toggle()
+            if !isDark {
+                withAnimation(.easeInOut(duration: 3.0).repeatForever(autoreverses: true)) {
+                    animateGradient.toggle()
+                }
             }
         }
     }

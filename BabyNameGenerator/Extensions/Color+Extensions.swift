@@ -12,19 +12,23 @@ extension Color {
 
     private static var isDark: Bool { SettingsManager.shared.isDarkMode }
 
+    // MARK: - Dark Background
+
+    static let darkBg = Color(hex: "#0D1B2A")
+
     // MARK: - Girl Theme
 
     static var babyGirl: Color { isDark ? Color(hex: "#8B4060") : Color(hex: "#FFD6E8") }
     static var babyGirlAccent: Color { isDark ? Color(hex: "#A04870") : Color(hex: "#FFC0D9") }
-    static var babyGirlGradientStart: Color { isDark ? Color(hex: "#2E1520") : Color(hex: "#FFE5F0") }
-    static var babyGirlGradientEnd: Color { isDark ? Color(hex: "#1A0E14") : Color(hex: "#FFF0F8") }
+    static var babyGirlGradientStart: Color { isDark ? darkBg : Color(hex: "#FFE5F0") }
+    static var babyGirlGradientEnd: Color { isDark ? darkBg : Color(hex: "#FFF0F8") }
 
     // MARK: - Boy Theme
 
     static var babyBoy: Color { isDark ? Color(hex: "#405E8B") : Color(hex: "#D6E8FF") }
     static var babyBoyAccent: Color { isDark ? Color(hex: "#4870A0") : Color(hex: "#C0D9FF") }
-    static var babyBoyGradientStart: Color { isDark ? Color(hex: "#152030") : Color(hex: "#E5F0FF") }
-    static var babyBoyGradientEnd: Color { isDark ? Color(hex: "#0E141A") : Color(hex: "#F0F8FF") }
+    static var babyBoyGradientStart: Color { isDark ? darkBg : Color(hex: "#E5F0FF") }
+    static var babyBoyGradientEnd: Color { isDark ? darkBg : Color(hex: "#F0F8FF") }
 
     // MARK: - Text Colors
 
