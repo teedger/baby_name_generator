@@ -34,7 +34,7 @@ struct GenerateButton: View {
                     .clipShape(Circle())
                     .overlay(
                         Circle()
-                            .stroke(Color.white.opacity(0.6), lineWidth: 2)
+                            .stroke(Color.glassBorder, lineWidth: 2)
                     )
                     .shadow(
                         color: themeColor.opacity(isPressed ? 0.2 : 0.4),

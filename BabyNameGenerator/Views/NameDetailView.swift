@@ -84,7 +84,7 @@ struct NameDetailView: View {
         )
         .overlay(
             RoundedRectangle(cornerRadius: 30)
-                .stroke(Color.white.opacity(0.5), lineWidth: 1)
+                .stroke(Color.glassBorder, lineWidth: 1)
         )
         .shadow(color: Color.shadowMedium, radius: 20, x: 0, y: 10)
     }
@@ -108,12 +108,12 @@ struct NameDetailView: View {
         .padding(24)
         .background(
             RoundedRectangle(cornerRadius: 20)
-                .fill(Color.white.opacity(0.3))
+                .fill(Color.glassCard)
                 .background(.ultraThinMaterial)
         )
         .overlay(
             RoundedRectangle(cornerRadius: 20)
-                .stroke(Color.white.opacity(0.5), lineWidth: 1)
+                .stroke(Color.glassBorder, lineWidth: 1)
         )
     }
 
@@ -149,7 +149,7 @@ struct NameDetailView: View {
                 .foregroundColor(.textPrimary)
                 .frame(maxWidth: .infinity)
                 .padding()
-                .background(Color.white.opacity(0.5))
+                .background(Color.glassBackground)
                 .cornerRadius(16)
             }
         }

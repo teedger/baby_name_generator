@@ -8,83 +8,44 @@
 import SwiftUI
 
 extension Color {
-    // MARK: - Girl Theme (Light Pink)
+    // MARK: - Adaptive Theme Colors
 
-    /// Main pink color for girl theme
-    static let babyGirl = Color(hex: "#FFD6E8")
+    private static var isDark: Bool { SettingsManager.shared.isDarkMode }
 
-    /// Accent pink (slightly darker)
-    static let babyGirlAccent = Color(hex: "#FFC0D9")
+    // MARK: - Girl Theme
 
-    /// Light pink for gradient start
-    static let babyGirlGradientStart = Color(hex: "#FFE5F0")
+    static var babyGirl: Color { isDark ? Color(hex: "#8B4060") : Color(hex: "#FFD6E8") }
+    static var babyGirlAccent: Color { isDark ? Color(hex: "#A04870") : Color(hex: "#FFC0D9") }
+    static var babyGirlGradientStart: Color { isDark ? Color(hex: "#2E1520") : Color(hex: "#FFE5F0") }
+    static var babyGirlGradientEnd: Color { isDark ? Color(hex: "#1A0E14") : Color(hex: "#FFF0F8") }
 
-    /// Very light pink for gradient end
-    static let babyGirlGradientEnd = Color(hex: "#FFF0F8")
+    // MARK: - Boy Theme
 
-    // MARK: - Boy Theme (Light Blue)
+    static var babyBoy: Color { isDark ? Color(hex: "#405E8B") : Color(hex: "#D6E8FF") }
+    static var babyBoyAccent: Color { isDark ? Color(hex: "#4870A0") : Color(hex: "#C0D9FF") }
+    static var babyBoyGradientStart: Color { isDark ? Color(hex: "#152030") : Color(hex: "#E5F0FF") }
+    static var babyBoyGradientEnd: Color { isDark ? Color(hex: "#0E141A") : Color(hex: "#F0F8FF") }
 
-    /// Main blue color for boy theme
-    static let babyBoy = Color(hex: "#D6E8FF")
+    // MARK: - Text Colors
 
-    /// Accent blue (slightly darker)
-    static let babyBoyAccent = Color(hex: "#C0D9FF")
+    static var textPrimary: Color { isDark ? Color(hex: "#E0E0E0") : Color(hex: "#2C3E50") }
+    static var textSecondary: Color { isDark ? Color(hex: "#A0A0A0") : Color(hex: "#7F8C8D") }
 
-    /// Light blue for gradient start
-    static let babyBoyGradientStart = Color(hex: "#E5F0FF")
+    // MARK: - Glass Colors
 
-    /// Very light blue for gradient end
-    static let babyBoyGradientEnd = Color(hex: "#F0F8FF")
-
-    // MARK: - Neutral Colors
-
-    /// Primary text color (dark gray)
-    static let textPrimary = Color(hex: "#2C3E50")
-
-    /// Secondary text color (medium gray)
-    static let textSecondary = Color(hex: "#7F8C8D")
-
-    /// Glass white overlay
-    static let glassWhite = Color.white.opacity(0.8)
-
-    /// Glass border color
-    static let glassBorder = Color.white.opacity(0.5)
+    static var glassWhite: Color { isDark ? Color.white.opacity(0.1) : Color.white.opacity(0.8) }
+    static var glassBorder: Color { isDark ? Color.white.opacity(0.15) : Color.white.opacity(0.5) }
+    static var glassBackground: Color { isDark ? Color.white.opacity(0.08) : Color.white.opacity(0.5) }
+    static var glassCard: Color { isDark ? Color.white.opacity(0.06) : Color.white.opacity(0.3) }
 
     // MARK: - Shadow Colors
 
-    /// Light shadow
-    static let shadowLight = Color.black.opacity(0.05)
-
-    /// Medium shadow
-    static let shadowMedium = Color.black.opacity(0.10)
-
-    /// Strong shadow
-    static let shadowStrong = Color.black.opacity(0.15)
-
-    // MARK: - Dark Mode Colors (for future dark theme)
-
-    /// Dark mode girl theme
-    static let babyGirlDark = Color(hex: "#4A1A2E")
-
-    /// Dark mode boy theme
-    static let babyBoyDark = Color(hex: "#1A2E4A")
-
-    /// Dark mode background
-    static let darkBackground = Color(hex: "#121212")
-
-    /// Dark mode card background
-    static let darkCard = Color(hex: "#1E1E1E")
-
-    /// Dark mode text primary
-    static let darkTextPrimary = Color(hex: "#E0E0E0")
-
-    /// Dark mode text secondary
-    static let darkTextSecondary = Color(hex: "#A0A0A0")
+    static var shadowLight: Color { Color.black.opacity(isDark ? 0.3 : 0.05) }
+    static var shadowMedium: Color { Color.black.opacity(isDark ? 0.4 : 0.10) }
+    static var shadowStrong: Color { Color.black.opacity(isDark ? 0.5 : 0.15) }
 
     // MARK: - Hex Initializer
 
-    /// Initialize color from hex string
-    /// - Parameter hex: Hex color string (e.g., "#FF0000" or "FF0000")
     init(hex: String) {
         let hex = hex.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
         var int: UInt64 = 0

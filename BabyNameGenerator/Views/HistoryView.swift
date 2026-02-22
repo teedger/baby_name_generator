@@ -153,7 +153,7 @@ struct HistoryRowView: View {
         )
         .overlay(
             RoundedRectangle(cornerRadius: 16)
-                .stroke(Color.white.opacity(0.5), lineWidth: 1)
+                .stroke(Color.glassBorder, lineWidth: 1)
         )
         .onTapGesture(perform: onTap)
     }

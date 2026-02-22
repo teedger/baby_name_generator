@@ -11,8 +11,10 @@ struct SettingsView: View {
     @ObservedObject var settingsManager = SettingsManager.shared
     @ObservedObject var favoritesManager = FavoritesManager.shared
     @ObservedObject var historyManager = HistoryManager.shared
+    @ObservedObject var authManager = AuthManager.shared
     @State private var showingClearAlert = false
     @State private var showingResetAlert = false
+    @State private var showingSignOutAlert = false
 
     var body: some View {
         NavigationView {
@@ -22,6 +24,9 @@ struct SettingsView: View {
 
                 ScrollView {
                     VStack(spacing: 24) {
+                        // Account section
+                        accountSection
+
                         // Appearance section
                         appearanceSection
 
@@ -51,6 +56,14 @@ struct SettingsView: View {
         } message: {
             Text("This will remove all favorites and history. This action cannot be undone.")
         }
+        .alert("Sign Out", isPresented: $showingSignOutAlert) {
+            Button("Cancel", role: .cancel) { }
+            Button("Sign Out", role: .destructive) {
+                authManager.signOut()
+            }
+        } message: {
+            Text("Are you sure you want to sign out?")
+        }
         .alert("Reset Settings", isPresented: $showingResetAlert) {
             Button("Cancel", role: .cancel) { }
             Button("Reset", role: .destructive) {
@@ -58,6 +71,56 @@ struct SettingsView: View {
             }
         } message: {
             Text("This will reset all settings to their default values.")
+        }
+    }
+
+    // MARK: - Account Section
+
+    private var accountSection: some View {
+        SettingsSection(title: "Account") {
+            // User info
+            HStack {
+                Image(systemName: "person.crop.circle.fill")
+                    .font(.system(size: 16))
+                    .foregroundColor(.blue)
+                    .frame(width: 28)
+
+                VStack(alignment: .leading, spacing: 2) {
+                    Text(authManager.userName ?? "Apple User")
+                        .font(.system(size: 16, weight: .medium, design: .rounded))
+                        .foregroundColor(.textPrimary)
+
+                    if let email = authManager.userEmail {
+                        Text(email)
+                            .font(.system(size: 13, design: .rounded))
+                            .foregroundColor(.textSecondary)
+                    }
+                }
+
+                Spacer()
+            }
+            .padding()
+            .background(Color.glassCard)
+            .cornerRadius(12)
+
+            // Sign out button
+            Button(action: { showingSignOutAlert = true }) {
+                HStack {
+                    Image(systemName: "rectangle.portrait.and.arrow.right")
+                        .font(.system(size: 16))
+                        .foregroundColor(.red)
+                        .frame(width: 28)
+
+                    Text("Sign Out")
+                        .font(.system(size: 16, design: .rounded))
+                        .foregroundColor(.red)
+
+                    Spacer()
+                }
+                .padding()
+                .background(Color.glassCard)
+                .cornerRadius(12)
+            }
         }
     }
 
@@ -116,7 +179,7 @@ struct SettingsView: View {
                 .pickerStyle(MenuPickerStyle())
             }
             .padding()
-            .background(Color.white.opacity(0.3))
+            .background(Color.glassCard)
             .cornerRadius(12)
         }
     }
@@ -143,7 +206,7 @@ struct SettingsView: View {
                     .foregroundColor(.textSecondary)
             }
             .padding()
-            .background(Color.white.opacity(0.3))
+            .background(Color.glassCard)
             .cornerRadius(12)
 
             HStack {
@@ -163,7 +226,7 @@ struct SettingsView: View {
                     .foregroundColor(.textSecondary)
             }
             .padding()
-            .background(Color.white.opacity(0.3))
+            .background(Color.glassCard)
             .cornerRadius(12)
 
             // Clear data button
@@ -181,7 +244,7 @@ struct SettingsView: View {
                     Spacer()
                 }
                 .padding()
-                .background(Color.white.opacity(0.3))
+                .background(Color.glassCard)
                 .cornerRadius(12)
             }
 
@@ -200,7 +263,7 @@ struct SettingsView: View {
                     Spacer()
                 }
                 .padding()
-                .background(Color.white.opacity(0.3))
+                .background(Color.glassCard)
                 .cornerRadius(12)
             }
         }
@@ -228,7 +291,7 @@ struct SettingsView: View {
                     .foregroundColor(.textSecondary)
             }
             .padding()
-            .background(Color.white.opacity(0.3))
+            .background(Color.glassCard)
             .cornerRadius(12)
 
             // Total names
@@ -249,7 +312,7 @@ struct SettingsView: View {
                     .foregroundColor(.textSecondary)
             }
             .padding()
-            .background(Color.white.opacity(0.3))
+            .background(Color.glassCard)
             .cornerRadius(12)
 
             // Made with love
@@ -311,7 +374,7 @@ struct SettingsToggleRow: View {
                 .labelsHidden()
         }
         .padding()
-        .background(Color.white.opacity(0.3))
+        .background(Color.glassCard)
         .cornerRadius(12)
     }
 }

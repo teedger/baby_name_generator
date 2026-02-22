@@ -76,7 +76,7 @@ struct NameGeneratorView: View {
                             .padding(.vertical, 10)
                             .background(
                                 Capsule()
-                                    .fill(Color.white.opacity(0.5))
+                                    .fill(Color.glassBackground)
                             )
                         }
                     }

@@ -63,7 +63,7 @@ struct NameDisplay: View {
         .clipShape(RoundedRectangle(cornerRadius: 30))
         .overlay(
             RoundedRectangle(cornerRadius: 30)
-                .stroke(Color.white.opacity(0.5), lineWidth: 1)
+                .stroke(Color.glassBorder, lineWidth: 1)
         )
         .shadow(color: Color.shadowMedium, radius: 20, x: 0, y: 10)
     }

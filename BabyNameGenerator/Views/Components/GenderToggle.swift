@@ -42,7 +42,7 @@ struct GenderToggle: View {
         .clipShape(Capsule())
         .overlay(
             Capsule()
-                .stroke(Color.white.opacity(0.5), lineWidth: 1)
+                .stroke(Color.glassBorder, lineWidth: 1)
         )
         .shadow(color: Color.shadowMedium, radius: 10, x: 0, y: 5)
     }

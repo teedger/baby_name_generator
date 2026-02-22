@@ -33,6 +33,8 @@
 		F2424D6BED9845D49550939B /* Extensions/Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EB399B71FA47EBBC478CD0 /* Extensions/Color+Extensions.swift */; };
 		FA1E9D4357964A68A95626D6 /* Views/SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B52004BFD8E4F78BDDF3857 /* Views/SettingsView.swift */; };
 		FF312B65E89F4F1986A6914E /* Models/BabyName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F462D55C8E248C1897EAAEF /* Models/BabyName.swift */; };
+		AA11BB22CC334455DD66EE77 /* Models/AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB22CC33DD4455667788AA11 /* Models/AuthManager.swift */; };
+		CC33DD44EE5566778899BB22 /* Views/SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD44EE55FF6677889900CC33 /* Views/SignInView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +65,9 @@
 		F2AF6709B50245B8AB5189C6 /* Extensions/View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions/View+Extensions.swift"; sourceTree = "<group>"; };
 		F3E4D5C6B7A8490182736450 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA899B21B6AE46228795C114 /* Data/mongolian_names.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Data/mongolian_names.json; sourceTree = "<group>"; };
+		BB22CC33DD4455667788AA11 /* Models/AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/AuthManager.swift; sourceTree = "<group>"; };
+		DD44EE55FF6677889900CC33 /* Views/SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/SignInView.swift; sourceTree = "<group>"; };
+		EE55FF66AA778899BB00DD44 /* BabyNameGenerator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BabyNameGenerator.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +110,9 @@
 				AB33B2CD2C00451A9E8ADCEC /* Views/Styles/GlassmorphicModifiers.swift */,
 				FA899B21B6AE46228795C114 /* Data/mongolian_names.json */,
 				F3E4D5C6B7A8490182736450 /* Assets.xcassets */,
+				BB22CC33DD4455667788AA11 /* Models/AuthManager.swift */,
+				DD44EE55FF6677889900CC33 /* Views/SignInView.swift */,
+				EE55FF66AA778899BB00DD44 /* BabyNameGenerator.entitlements */,
 			);
 			path = BabyNameGenerator;
 			sourceTree = "<group>";
@@ -214,6 +222,8 @@
 				3E0323E3E99A40ACBB55F241 /* Views/SearchView.swift in Sources */,
 				FA1E9D4357964A68A95626D6 /* Views/SettingsView.swift in Sources */,
 				1ABF2C1494B84FDB879269EC /* Views/Styles/GlassmorphicModifiers.swift in Sources */,
+				AA11BB22CC334455DD66EE77 /* Models/AuthManager.swift in Sources */,
+				CC33DD44EE5566778899BB22 /* Views/SignInView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,6 +234,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BabyNameGenerator/BabyNameGenerator.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
@@ -252,6 +263,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BabyNameGenerator/BabyNameGenerator.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";

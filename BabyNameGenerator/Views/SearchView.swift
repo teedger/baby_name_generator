@@ -114,12 +114,12 @@ struct SearchView: View {
         .padding()
         .background(
             RoundedRectangle(cornerRadius: 16)
-                .fill(Color.white.opacity(0.5))
+                .fill(Color.glassBackground)
                 .background(.ultraThinMaterial)
         )
         .overlay(
             RoundedRectangle(cornerRadius: 16)
-                .stroke(Color.white.opacity(0.5), lineWidth: 1)
+                .stroke(Color.glassBorder, lineWidth: 1)
         )
         .padding(.horizontal)
     }
@@ -211,11 +211,11 @@ struct FilterPill: View {
             .padding(.vertical, 8)
             .background(
                 Capsule()
-                    .fill(isActive ? Color.white.opacity(0.6) : Color.white.opacity(0.3))
+                    .fill(isActive ? Color.glassBackground : Color.glassCard)
             )
             .overlay(
                 Capsule()
-                    .stroke(Color.white.opacity(0.5), lineWidth: 1)
+                    .stroke(Color.glassBorder, lineWidth: 1)
             )
     }
 }
@@ -248,7 +248,7 @@ struct SearchResultRow: View {
                 .foregroundColor(.textSecondary.opacity(0.7))
                 .padding(.horizontal, 8)
                 .padding(.vertical, 4)
-                .background(Color.white.opacity(0.3))
+                .background(Color.glassCard)
                 .cornerRadius(8)
 
             Button(action: onFavorite) {
@@ -265,7 +265,7 @@ struct SearchResultRow: View {
         )
         .overlay(
             RoundedRectangle(cornerRadius: 12)
-                .stroke(Color.white.opacity(0.3), lineWidth: 1)
+                .stroke(Color.glassBorder, lineWidth: 1)
         )
         .onTapGesture(perform: onTap)
     }
